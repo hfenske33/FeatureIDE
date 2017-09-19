@@ -19,6 +19,7 @@
 		<module>plugins/de.ovgu.featureide.fm.core</module>
 		<module>plugins/de.ovgu.featureide.fm.ui</module>
 		<module>deploy/de.ovgu.featureide.featuremodeling</module>
+		<module>deploy/FeatureModelingUpdateSite</module>
 	</modules>
 
 	<build>

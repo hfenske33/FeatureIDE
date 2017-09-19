@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/de.ovgu.featureide.featuremodeling_3.4.0.qualifier.jar" id="de.ovgu.featureide.featuremodeling" version="3.4.0.qualifier">
+      <category name="Feature Modeling"/>
+   </feature>
+   <category-def name="Feature Modeling" label="Feature Modeling"/>
+</site>
