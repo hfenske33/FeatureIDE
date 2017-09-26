@@ -22,4 +22,4 @@ script:
 
 after_failure:
 - ls surefire-reports/
-- cat /surefire-reports/*.txt
+- find surefire-reports -name '*.txt' -exec cat {} +
