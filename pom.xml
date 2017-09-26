@@ -69,6 +69,7 @@
 					<failIfNoTests>false</failIfNoTests>
 					<!-- IMPORTANT: Disable the following line after testing -->
 					<testFailureIgnore>false</testFailureIgnore>
+					<reportsDirectory>/surefire-reports</reportsDirectory>
 					<includes>
 						<include>**/T*.java</include>
 						<include>**/B*.java</include>
