@@ -66,6 +66,9 @@
 				<version>${tycho-version}</version>
 				<configuration>
 					<useUIHarness>true</useUIHarness>
+					<failIfNoTests>false</failIfNoTests>
+					<!-- IMPORTANT: Disable the following line after testing -->
+					<testFailureIgnore>false</testFailureIgnore>
 					<includes>
 						<include>**/T*.java</include>
 						<include>**/B*.java</include>
