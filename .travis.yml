@@ -8,7 +8,6 @@ env:
 
 before_install:
   - sh -e /etc/init.d/xvfb start - sleep 10
-  - mkdir -m 666 surefire-reports/
 
 jdk: oraclejdk8
 
@@ -22,5 +21,4 @@ script:
 - mvn clean verify
 
 after_failure:
-- ls surefire-reports/
-- find surefire-reports -name '*.txt' -exec cat {} +
+- find -name "*.txt" | grep -F 'surefire-reports' | xargs cat
