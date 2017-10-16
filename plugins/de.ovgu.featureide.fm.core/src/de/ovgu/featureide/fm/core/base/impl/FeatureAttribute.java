@@ -50,18 +50,6 @@ public class FeatureAttribute {
 	private Types type;
 
 	/**
-	 * Create empty FeatureAttribute.
-	 */
-	public FeatureAttribute() {
-		name = "";
-		type = null;
-		recursive = false;
-		value = "";
-		unit = "";
-		configurable = false;
-	}
-
-	/**
 	 * @param name Name
 	 * @param value Value
 	 * @param type Type
@@ -76,31 +64,32 @@ public class FeatureAttribute {
 		this.unit = unit;
 		this.recursive = recursive;
 		this.configurable = configurable;
+
 	}
 
 	/**
 	 * @return True, if the value of this FeatureAttribute matches its type. Else false.
 	 */
 	public boolean checkValue() {
-		if (type.toString().equals(LONG)) {
-			try {
-				Long.parseLong(value);
-				return true;
-			} catch (final NumberFormatException e) {
-				return false;
+		if (!value.isEmpty()) {
+			if (type.toString().equals(LONG)) {
+				try {
+					Long.parseLong(value);
+				} catch (final NumberFormatException e) {
+					return false;
+				}
 			}
-		}
-		if (type.toString().equals(DOUBLE)) {
-			try {
-				Double.parseDouble(value);
-				return true;
-			} catch (final NumberFormatException e) {
-				return false;
+			if (type.toString().equals(DOUBLE)) {
+				try {
+					Double.parseDouble(value);
+				} catch (final NumberFormatException e) {
+					return false;
+				}
 			}
-		}
-		if (type.toString().equals(BOOLEAN)) {
-			if (value.toLowerCase().equals("true") || value.toLowerCase().equals("false")) {
-				return true;
+			if (type.toString().equals(BOOLEAN)) {
+				if (!value.toLowerCase().equals("true") && !value.toLowerCase().equals("false")) {
+					return false;
+				}
 			}
 		}
 		return true;
@@ -111,27 +100,25 @@ public class FeatureAttribute {
 	 * @return true if match, else false.
 	 */
 	public boolean checkValue(String value) {
-		if (type.toString().equals(LONG)) {
-			try {
-				Long.parseLong(value);
-				return true;
-			} catch (final NumberFormatException e) {
-				return false;
+		if (!value.isEmpty()) {
+			if (type.toString().equals(LONG)) {
+				try {
+					Long.parseLong(value);
+				} catch (final NumberFormatException e) {
+					return false;
+				}
 			}
-		}
-		if (type.toString().equals(DOUBLE)) {
-			try {
-				Double.parseDouble(value);
-				return true;
-			} catch (final NumberFormatException e) {
-				return false;
+			if (type.toString().equals(DOUBLE)) {
+				try {
+					Double.parseDouble(value);
+				} catch (final NumberFormatException e) {
+					return false;
+				}
 			}
-		}
-		if (type.toString().equals(BOOLEAN)) {
-			if (value.toLowerCase().equals("true") || value.toLowerCase().equals("false")) {
-				return true;
-			} else {
-				return false;
+			if (type.toString().equals(BOOLEAN)) {
+				if (!value.toLowerCase().equals("true") && !value.toLowerCase().equals("false")) {
+					return false;
+				}
 			}
 		}
 		return true;
@@ -246,7 +233,6 @@ public class FeatureAttribute {
 	 */
 	public void setRecursive(boolean recursive) {
 		this.recursive = recursive;
-
 	}
 
 	/**
@@ -262,13 +248,6 @@ public class FeatureAttribute {
 	}
 
 	/**
-	 * @param type set Type from given type.
-	 */
-	public void setType(Types type) {
-		this.type = type;
-	}
-
-	/**
 	 * @param Set unit from String.
 	 */
 	public void setUnit(String unit) {
@@ -279,7 +258,9 @@ public class FeatureAttribute {
 	 * @param Set value from String.
 	 */
 	public void setValue(String value) {
-		this.value = value;
+		if (checkValue(value)) {
+			this.value = value;
+		}
 	}
 
 	@Override
