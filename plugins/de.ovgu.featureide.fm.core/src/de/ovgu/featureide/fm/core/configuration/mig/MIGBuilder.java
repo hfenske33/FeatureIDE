@@ -48,6 +48,10 @@ import de.ovgu.featureide.fm.core.job.monitor.IMonitor;
 /**
  * Adjacency matrix implementation for a feature graph.
  *
+ * TODO Remove any weak edges from a node that satisfies them with its strongly connected nodes.
+ *
+ * TODO Implement check for compatibility with feature model.
+ *
  * @author Sebastian Krieter
  */
 
