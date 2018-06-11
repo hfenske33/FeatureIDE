@@ -18,6 +18,7 @@ cache:
 install: true
 
 script:
+- dpkg -l libgtk2.0-0 libgtk-3-0
 - mvn -Pnu -Pgui clean package
 
 after_failure:
