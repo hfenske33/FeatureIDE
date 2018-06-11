@@ -24,8 +24,9 @@
                 	<!--<version>2.3.0-20180405.233927-307</version>-->
                     <!-- Manage the memory used by Runner -->
                     <vmArgs>
-                        <vmArg>-Xmx1024m</vmArg>
-                    </vmArgs>
+      					<vmArg>-Xmx2048m</vmArg>
+      					<vmArg>-Xms512m</vmArg>
+   					</vmArgs>
                 </runner>
 
                 <aut>
