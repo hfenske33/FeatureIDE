@@ -38,10 +38,11 @@
               		</injections>
                 </aut>
 
+                <!--
                 <tests>
                 	<test>CreateFeaturesInFeatureDiagram.test</test>
                 </tests>
-
+                -->
                 
                 <!--	
                 <testOptions>
