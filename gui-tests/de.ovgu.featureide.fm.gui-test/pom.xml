@@ -32,7 +32,8 @@
                 <aut>
                   	<!--<explicit>https://ftp.fau.de/eclipse/technology/epp/downloads/release/neon/3/eclipse-rcp-neon-3-linux-gtk-x86_64.tar.gz</explicit>
               		<explicit>https://ftp.fau.de/eclipse/technology/epp/downloads/release/neon/3/eclipse-java-oxygen-3a-linux-gtk-x86_64.tar.gz</explicit>-->
-              		<explicit>https://ftp.fau.de/eclipse/technology/epp/downloads/release/oxygen/3/eclipse-rcp-oxygen-3-linux-gtk-x86_64.tar.gz</explicit>
+              		<explicit>https://ftp.fau.de/eclipse/technology/epp/downloads/release/photon/RC3/eclipse-committers-photon-RC3-linux-gtk-x86_64.tar.gz</explicit>
+              		<!--<explicit>https://ftp.fau.de/eclipse/technology/epp/downloads/release/oxygen/3/eclipse-rcp-oxygen-3-linux-gtk-x86_64.tar.gz</explicit>-->
 
 
 
