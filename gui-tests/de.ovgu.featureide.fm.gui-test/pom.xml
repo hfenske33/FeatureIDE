@@ -39,7 +39,7 @@
                 </aut>
 
                 <tests>
-                	<test>CreateFeaturesInFeatureDiagram</test>
+                	<test>CreateFeaturesInFeatureDiagram.test</test>
                 </tests>
 
                 
