@@ -30,11 +30,6 @@
                 </runner>
 
                 <aut>
-                	<vmArgs> 
-    					<vmArg>-Xmx2048m</vmArg>  
-    					<vmArg>-Xms512m</vmArg> 
-  					</vmArgs>
-
                   	<explicit>https://ftp.fau.de/eclipse/technology/epp/downloads/release/neon/3/eclipse-rcp-neon-3-linux-gtk-x86_64.tar.gz</explicit>
               		<injections>
                   		<injection>
@@ -42,6 +37,10 @@
                   		</injection>
               		</injections>
                 </aut>
+
+                <tests>
+                	<test>CreateFeaturesInFeatureDiagram</test>
+                </tests>
 
                 
                 <!--	
